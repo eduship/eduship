@@ -6,10 +6,7 @@ var bodyParser = require('body-parser');
 var debug = require('debug');
 var http = require('http');
 
-var filament = require('./routes/filament');
-var printer = require('./routes/printer');
-var scanner = require('./routes/scanner');
-var resin = require('./routes/resin');
+var event = require('./routes/events');
 var app = express();
 
 
@@ -67,7 +64,7 @@ app.use(cors());
 
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://user:test1234@ds121349.mlab.com:21349/c3d', { useMongoClient: true, promiseLibrary: require('bluebird') })
+mongoose.connect('mongodb://test:9347ztg83fhi@ds159459.mlab.com:59459/puk', { useMongoClient: true, promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
@@ -79,10 +76,8 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 //app.use(express.static(path.join(__dirname, 'dist')));
 app.set('view engine', 'html');
 //app.use('/filaments', express.static(path.join(__dirname, 'dist')));
-app.use('/filament', filament);
-app.use('/printer', printer);
-app.use('/scanner', scanner);
-app.use('/resin', resin);
+app.use('/event', event);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

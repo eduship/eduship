@@ -1,44 +1,44 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Resin = require('../models/resin');
+var Event = require('../models/event');
 
-/* GET ALL ResinS */
+/* GET ALL EventS */
 router.get('/', function(req, res, next) {
-  Resin.find(function (err, products) {
+  Event.find(function (err, products) {
     if (err) return next(err);
     res.json(products);
   });
 });
 
-/* GET SINGLE Resin BY ID */
+/* GET SINGLE Event BY ID */
 router.get('/:id', function(req, res, next) {
-  Resin.findById(req.params.id, function (err, post) {
+  Event.findById(req.params.id, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* SAVE Resin */
+/* SAVE Event */
 router.post('/', function(req, res, next) {
-  Resin.create(req.body, function (err, post) {
+  Event.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* UPDATE Resin */
+/* UPDATE Event */
 router.put('/:id', function(req, res, next) {
   console.log(req.body);
-  Resin.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
+  Event.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
 });
 
-/* DELETE Resin */
+/* DELETE Event */
 router.delete('/:id', function(req, res, next) {
-  Resin.findByIdAndRemove(req.params.id, req.body, function (err, post) {
+  Event.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
   });
