@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Formular für Veranstalter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Formular für Veranstalter</h1>
+  <form>
+    <div class="form-group">
+      <label for="EventName">Name der Veranstaltung</label>
+      <input type="text" class="form-control" id="EventName" required="true" placeholder="Name der Veranstaltung">
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-2">
+        <label for="EventDateStart">Startdatum</label>
+        <input type="date" class="form-control" id="EventDateStart" required="true">
+      </div>
+      <div class="col-xs-2">
+        <label for="EventDateStop">Enddatum</label>
+        <input type="date" class="form-control" id="EventDateStop" required="true">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="EventLevel">Schwierigkeit</label>
+      <select class="form-control" id="EventLevel" required="true">
+        <option>-- select level --</option>
+        <option>1 - Anfänger</option>
+        <option>2 - Anfänger</option>
+        <option>3 - Fortgeschritten</option>
+        <option>4 - Fortgeschritten</option>
+        <option>5 - Profi</option>
+        <option>6 - Profi</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="EventTopic">Thema</label>
+      <select class="form-control" id="EventTopic" required="true">
+        <option>-- select --</option>
+        <option>Coding</option>
+        <option>Design</option>
+        <option>Creativity</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="EventAge">Alter der Teilnehmer</label>
+      <input type="number" class="form-control" id="EventAge" required="true" placeholder="Alter der Teilnehmer">
+    </div>
+    <div class="form-group">
+      <label for="EventNumber">Teilnehmerzahl</label>
+      <input type="number" class="form-control" id="EventNumber" required="true" placeholder="Zahl der Teilnehmenden">
+    </div>
+    <div class="form-group">
+      <label for="EventTerm">Anmeldefrist</label>
+      <input type="date" class="form-control" id="EventTerm">
+    </div>
+    <div class="form-group">
+      <label for="EventNumber">Link zur Veranstaltung</label>
+      <input type="url" class="form-control" id="EventNumber" required="true" placeholder="Link">
+    </div>
+    <h3>Adresse:</h3>
+    <div class="form-group">
+      <label for="EventAdressName">Name der Location</label>
+      <input type="text" class="form-control" id="EventAdressName" required="true" placeholder="Name der Location">
+    </div>
+    <div class="form-group">
+      <label for="EventAdressStreet">Straße</label>
+      <input type="text" class="form-control" id="EventAdressStreet" placeholder="Straßenname 1">
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-2">
+        <label for="EventAdressZip">Postleitzahl</label>
+        <input type="number" class="form-control" id="EventAdressZip" required="true" placeholder="PLZ">
+      </div>
+      <div class="col-xs-4">
+        <label for="EventAdressTown">Ort</label>
+        <input type="text" class="form-control" id="EventAdressTown" required="true" placeholder="Ort">
+      </div>
+    </div>
+    <h3>Kosten:</h3>
+    <div class="form-group">
+      <label for="EventCosts">Kosten für die Veranstaltung</label>
+      <input type="text" class="form-control" id="EventCosts" required="true" placeholder="0€">
+    </div>
+    <div class="form-group row">
+      <div class="col-xs-10">
+        <label for="EventCostsStay">Kosten für Unterkunft</label>
+        <input type="text" class="form-control" id="EventCostsStay" placeholder="0€">
+      </div>
+      <div class"col-xs-2">
+        <label class="checkbox-inline">
+        <input type="checkbox" value="">keine Unterkunft</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="EventCostsTrip">Übernahme der Kosten für die Anreise</label>
+      <label class="radio-inline"><input type="radio" name="optradio">Ja</label>
+      <label class="radio-inline"><input type="radio" name="optradio">Nein</label>
+      <label class="radio-inline"><input type="radio" name="optradio">Möglich <i>(Vorraussetzungen bitte ganz am Ende in das Feld "Weiteres")</i></label>
+    </div>
+    <div class="form-group">
+        <label for="EventDescription">Beschreibung des Events</label>
+        <textarea class="form-control" id="EventDescription" rows="8" required="true" placeholder="Beschreiben Sie das Event so genau wie möglich"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="EventTags">Tags</label>
+      <input type="text" class="form-control" id="EventTags" placeholder="Geben Sie so viele Tags wie möglich für eine bessere Identifikation an">
+    </div>
+    <h2>Angaben zum Veranstalter</h2>
+    <div class="form-group">
+      <label for="OrganiserName">Name des Veranstalters</label>
+      <input type="text" class="form-control" id="OrganiserName" required="true" placeholder="Name des Veranstalters">
+    </div>
+    <div class="form-group">
+      <label for="EventContactName">Name der Kontaktperson</label>
+      <input type="text" class="form-control" id="EventContactName" required="true" placeholder="Name der Kontaktperson">
+    </div>
+    <div class="form-group">
+      <label for="EventContactEmail">Email der Kontaktperson</label>
+      <input type="email" class="form-control" id="EventContactEmail" required="true" placeholder="Email der Kontaktperson">
+    </div>
+    <div class="form-group">
+      <label for="EventContactPhone">Telefonnummer der Kontaktperson</label>
+      <input type="tel" class="form-control" id="EventContactPhone" placeholder="Telefonnummer der Kontaktperson">
+    </div>
+    <h3>Weiteres</h3>
+    <div class="form-group">
+        <label for="EventExtras">Weiteres:</label>
+        <textarea class="form-control" id="EventExtras" rows="10" placeholder="Was müssen wir noch von Ihrer Veranstaltung wissen?"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Abschicken</button>
+  </form>
+</div>
+</body>
+</html>
