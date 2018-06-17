@@ -1,7 +1,7 @@
 {
-  "name": "compare3dBACKEND",
+  "name": "eduship",
   "version": "1.0.0",
-  "description": "MongoDB Express.js Vue.js Node.js Stack",
+  "description": "",
   "author": "Moritz Beck <moritz.beck@compare3d.de>",
   "private": true,
   "scripts": {
