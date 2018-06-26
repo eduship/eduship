@@ -623,7 +623,6 @@ table.fc-header{
 }
 .fc-week .fc-day.fc-state-highlight:hover .fc-day-number{ //tagesmarkierung drauf
     background-color:  #DEE0FF;
-		color: #2930BD
 }
 .fc-button-today{
     border: 1px solid rgba(255,255,255,.0);
