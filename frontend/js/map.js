@@ -63,7 +63,7 @@ function addContent(trinken){
 }*/
 
 
-/*axios.get('http://localhost:3000/event')
+axios.get('http://localhost:3000/event')
 .then(function (response) {
   console.log(response);
   for (index in response.data){
@@ -71,4 +71,4 @@ function addContent(trinken){
     var description = item.name + '<br>' + item.startDate + '-' + item.endDate + '<br>' + '<a href="https://google.com">weitere Infos ...</a>';
     addMarker(item.locationLong, item.locationLat, description);
   }
-}*/
+}
