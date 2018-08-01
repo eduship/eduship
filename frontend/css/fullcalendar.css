@@ -607,7 +607,7 @@ table.fc-header{
 .fc-week .fc-day > div .fc-day-number{
     font-size: 15px;
     margin: 2px;
-    min-width: 19px;
+    min-width: 20px; //kreis?
     padding: 6px;
     text-align: center;
 }
@@ -623,7 +623,7 @@ table.fc-header{
 }
 .fc-week .fc-day.fc-state-highlight:hover .fc-day-number{ //tagesmarkierung drauf
     background-color:  #DEE0FF;
-		color: #000000
+		color: #FFFFFF
 }
 .fc-button-today{
     border: 1px solid rgba(255,255,255,.0);
