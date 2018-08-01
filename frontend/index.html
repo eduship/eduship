@@ -33,6 +33,55 @@
 
 
 
+  <link href='css/fullcalendar.css' rel='stylesheet' />
+  <link href='css/fullcalendar.print.css' rel='stylesheet' media='print' />
+
+  <script src='jquery/jquery-1.10.2.js'></script>
+  <script src='jquery/jquery-ui.custom.min.js'></script>
+
+  <script src='js/fullcalendar.js'></script>
+
+  <script src='js/calendarEvents.js'></script>
+
+  <style>
+
+  	body {
+  		margin-top: 40px;
+  		text-align: center;
+  		font-size: 14px;
+  		font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
+  		}
+
+  	#wrap {
+  		width: 1100px;
+  		margin: 0 auto;
+  		}
+
+  	#external-events {
+  		float: left;
+  		width: 150px;
+  		padding: 0 10px;
+  		text-align: left;
+  		}
+
+  	#external-events h4 {
+  		font-size: 16px;
+  		margin-top: 0;
+  		padding-top: 1em;
+  		}
+
+  	#calendar {
+  /* 		float: right; */
+          margin: 0 auto;
+  		width: 900px;
+  		background-color:;
+  		  border-radius: 6px;
+          box-shadow: 0 1px 2px #C3C3C3;
+  		}
+
+  </style>
+
+
   </head>
 
   <body>
@@ -57,7 +106,19 @@
 
 
     <!-- Main Content -->
-   <div id="mapid"></div>
+    <div id="mapid"></div>
+    <div id='wrap'>
+
+     <br />
+     <br />
+     <br />
+
+   <div id='calendar'></div>
+
+   <div style='clear:both'></div>
+   </div>
+
+
 
     <!-- Footer -->
     <div id="footer"></div>
@@ -71,6 +132,9 @@
     <script src="js/clean-blog.min.js"></script>
     <script src="js/map.js"></script>
     <script src="js/eduship.js"></script>
+
+    <script src="js/fullcalendar.js"></script>
+
 
   </body>
 
