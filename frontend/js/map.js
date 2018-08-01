@@ -55,7 +55,7 @@ function addContent(trinken){
 }*/
 
 
-  }
+//}
 
 
 
@@ -69,4 +69,3 @@ axios.get('http://localhost:3000/event')
   }
 
 })
- 
