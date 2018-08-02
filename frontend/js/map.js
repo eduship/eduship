@@ -13,7 +13,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/elisabethschiele/cjgi2unu6005k2rs2
 
 function addMarker(object){
   var marker = L.marker([object.locationLong,object.locationLat]).addTo(mymap)
-  marker.bindPopup('<b>'+object.name+'</b><br>'+object.startDate+ '  -  '+object.endDate+'</br><br><a href="http://google.de" class="btn-karte-popup" role="button">mehr info</a>').openPopup();
+  marker.bindPopup('<b>'+object.name+'</b><br>'+object.startDate+ '  -  '+object.endDate+'</br><br><a href="placeholder.html" class="btn-karte-popup" role="button">mehr info</a>').openPopup();
   markers.push(marker);
 
 }
