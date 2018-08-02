@@ -49,11 +49,13 @@ function addContent(trinken){
 }*/
 
 
-//}
+
+//  }
 
 
 
-axios.get('http://localhost:3000/event')
+
+axios.get('https://api.eduship.de/event')
 .then(function (response) {
   console.log(response);
   for (index in response.data){
