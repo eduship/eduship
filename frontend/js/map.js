@@ -10,11 +10,15 @@ L.tileLayer('https://api.mapbox.com/styles/v1/elisabethschiele/cjgi2unu6005k2rs2
     accessToken: 'pk.eyJ1IjoiZWxpc2FiZXRoc2NoaWVsZSIsImEiOiJjamdpMnFpcXowaWJwMnFwams4aWk5YXl3In0.IuvGOgBuRE6_BMIkhE7Okg'
 }).addTo(mymap);
 
+
 function addMarker(object){
   var marker = L.marker([object.locationLong,object.locationLat]).addTo(mymap)
   marker.bindPopup('<b>'+object.name+'</b><br>'+object.startDate+ '  -  '+object.endDate+'</br><br><a href="http://google.de" class="btn-karte-popup" role="button">mehr info</a>').openPopup();
   markers.push(marker);
-//<button type="button" class="btn-karte-popup" data-id="'+object.id+'"data-toggle="modal" data-target="#exampleModal"> more info</button>
+
+}
+
+
   /*var info = '';
   info +='<button type="button" class="btn-karte-popup" data-id="'+object.id+'" data-toggle="modal" </button><hr>';
 
@@ -22,10 +26,6 @@ function addMarker(object){
     document.getElementById('content').innerHTML = info;
     document.getElementById('contentTitle').innerHTML = location.name;
   })*/
-
-}
-
-
 
 /*  marker.bindPopup('<b>'+object.name+'</b><br><button type="button" class="btn-karte-popup" data-id="'+object.id+'"data-toggle="modal" data-target="#exampleModal">more info</button>').openPopup();
 
@@ -46,11 +46,8 @@ function addMarker(object){
 function addContent(trinken){
   var neu = "neuer <b>fetter<\/b> Text";
    document.getElementById('content').innerHTML = neu;
+}
 }*/
-
-
-
-//  }
 
 
 
@@ -60,7 +57,6 @@ axios.get('https://api.eduship.de/event')
   console.log(response);
   for (index in response.data){
     var item = response.data[index];
-
     addMarker(item);
   }
 
