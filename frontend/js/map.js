@@ -10,28 +10,22 @@ L.tileLayer('https://api.mapbox.com/styles/v1/elisabethschiele/cjgi2unu6005k2rs2
     accessToken: 'pk.eyJ1IjoiZWxpc2FiZXRoc2NoaWVsZSIsImEiOiJjamdpMnFpcXowaWJwMnFwams4aWk5YXl3In0.IuvGOgBuRE6_BMIkhE7Okg'
 }).addTo(mymap);
 
-function addMarker(long, lat, description){
-  var marker = L.marker([long,lat]).addTo(mymap)
-  .bindPopup(description)
+function addMarker(object){
+  var marker = L.marker([object.locationLong,object.locationLat]).addTo(mymap)
+  marker.bindPopup('<b>'+object.name+'</b><br>'+object.startDate+ '  -  '+object.endDate+'</br><br><a href="http://google.de" class="btn-karte-popup" role="button">mehr info</a>').openPopup();
   markers.push(marker);
+//<button type="button" class="btn-karte-popup" data-id="'+object.id+'"data-toggle="modal" data-target="#exampleModal"> more info</button>
+  /*var info = '';
+  info +='<button type="button" class="btn-karte-popup" data-id="'+object.id+'" data-toggle="modal" </button><hr>';
+
+  marker.on('click', function (e){
+    document.getElementById('content').innerHTML = info;
+    document.getElementById('contentTitle').innerHTML = location.name;
+  })*/
 
 }
 
 
-
-/*function addMarker(object){
-  var marker = L.marker([object.locationLong,object.locationLat]).addTo(mymap);
-  markers.push(marker);
-*/
-/*  var stars = '';
-  for(var i=1; i<=5;i++){
-    if(i<=location.quality){
-      stars +='<span class="fa fa-star checked"></span>'
-    }
-    else{
-      stars +='<span class="fa fa-star unchecked"></span>'
-    }
-  }*/
 
 /*  marker.bindPopup('<b>'+object.name+'</b><br><button type="button" class="btn-karte-popup" data-id="'+object.id+'"data-toggle="modal" data-target="#exampleModal">more info</button>').openPopup();
 
@@ -55,7 +49,9 @@ function addContent(trinken){
 }*/
 
 
+
 //  }
+
 
 
 
@@ -64,9 +60,8 @@ axios.get('https://api.eduship.de/event')
   console.log(response);
   for (index in response.data){
     var item = response.data[index];
-    var description = item.name + '<br>' + item.startDate + '-' + item.endDate + '<br>' + '<a href="https://google.com">weitere Infos ...</a>';
-    addMarker(item.locationLong, item.locationLat, description);
+
+    addMarker(item);
   }
 
 })
- 
