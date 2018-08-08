@@ -52,7 +52,7 @@ function addContent(trinken){
 
 
 
-axios.get('http://localhost:3001/event')
+axios.get('http:s//rapi.eduship.de/event')
 .then(function (response) {
   console.log(response);
   for (index in response.data){
