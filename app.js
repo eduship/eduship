@@ -10,9 +10,9 @@ var api = require('./backend/routes/apiRouter');
 var app = express();
 
 //WEB SERVER:
-app.set('port', 80);
+app.set('port', 8080);
 var server = http.createServer(app);
-server.listen(80);
+server.listen(8080);
 server.on('error', onError);
 
 function onError(error) {
@@ -25,7 +25,7 @@ function onError(error) {
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://test:9347ztg83fhi@ds159459.mlab.com:59459/puk', { useMongoClient: true, promiseLibrary: require('bluebird') })
-  .then(() =>  console.log('connection succesful server started'))
+  .then(() =>  console.log('connection succesful server started on port 8080'))
   .catch((err) => console.error(err));
 
 app.use(express.static(path.join(__dirname, '/frontend')));
